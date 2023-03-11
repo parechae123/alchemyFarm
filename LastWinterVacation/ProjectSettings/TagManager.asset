@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Interaction
+  - SellUI
+  - BuyUI
+  - invenData
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - InvenData
+  - Water
+  - UI
+  - NPC
+  - NPCInvenData
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: InvenData
+    uniqueID: 1032165461
+    locked: 0
+  - name: UI
+    uniqueID: 688304159
+    locked: 0

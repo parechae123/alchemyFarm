@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0accd005eb0ce14e9de767018db6ee1, type: 3}
+  m_Name: carrotSeed
+  m_EditorClassIdentifier: 
+  Icon: {fileID: 21300000, guid: f66745e4c5981d64fa519837a4561960, type: 3}
+  ItemName: 
+  Amount: 0
+  ItemNumber: 2
+  Model: {fileID: 1712200964176758, guid: a74d9e41a3e780f47b3278a49fe842da, type: 3}
+  ItemValue: 10

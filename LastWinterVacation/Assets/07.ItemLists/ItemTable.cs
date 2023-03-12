@@ -13,6 +13,11 @@ public class ItemTable : ScriptableObject
     [SerializeField]
     private string ItemName;
     public string itemName { get { return ItemName; } }
+    //Enum 
+    public enum ItemTypeList {Empty,Seed,EquipMents,Alchmies, Furniture,HomeBluePrints }
+    [SerializeField]
+    private ItemTypeList ItemType;
+    public ItemTypeList itemType { get { return ItemType; } }
 
     [SerializeField]
     private byte Amount;

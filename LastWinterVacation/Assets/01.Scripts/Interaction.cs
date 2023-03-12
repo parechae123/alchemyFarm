@@ -11,7 +11,8 @@ public class Interaction : MonoBehaviour
         Farmer,
         Miner, 
         Alchemist,
-        GeneralStore
+        GeneralStore,
+        Farm
     }
     [SerializeField]
     NPCType npctype;
@@ -22,8 +23,16 @@ public class Interaction : MonoBehaviour
     [SerializeField] private ItemTable[] npcItems;
     public void UIset()
     {
-        Debug.Log("ÀÚ¿ø³¶ºñ");
-        isSlotEmpty = new bool[UI.transform.childCount];
-        npcItems = new ItemTable[UI.transform.childCount];
+        if(npctype != NPCType.Farm)
+        {
+            for(byte i = 0; i < npcItems.Length; i++)
+            {
+                UI.transform.GetChild(i).GetChild(0).GetComponent<Buy>().SellItem = npcItems[i];
+            }
+        }
+        if(npctype == NPCType.Farm)
+        {
+
+        }
     }
 }

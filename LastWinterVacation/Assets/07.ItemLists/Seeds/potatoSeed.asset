@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0accd005eb0ce14e9de767018db6ee1, type: 3}
-  m_Name: carrotSeed
+  m_Name: potatoSeed
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300000, guid: f66745e4c5981d64fa519837a4561960, type: 3}
-  ItemName: 
+  Icon: {fileID: 21300000, guid: a9a3119134c3c4842aaee4e1b618f6c1, type: 3}
+  ItemName: PotatoSeed
+  ItemType: 1
   Amount: 0
-  ItemNumber: 2
-  Model: {fileID: 1712200964176758, guid: a74d9e41a3e780f47b3278a49fe842da, type: 3}
+  ItemNumber: 1
+  Model: {fileID: 1347292578903898, guid: 53e5ab917382c9749a58810d6e170537, type: 3}
   ItemValue: 10

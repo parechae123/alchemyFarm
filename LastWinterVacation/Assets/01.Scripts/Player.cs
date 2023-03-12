@@ -174,7 +174,7 @@ public class Player : MonoBehaviour
                     dragUI.GetComponent<InvenData>().IsOut = true;
                     dragUI.transform.position = mousePos;
                 }
-                if(dragUI.layer == 7)
+                if(dragUI.layer == 7 && dragUI.GetComponent<Buy>().SellItem.itemType != ItemTable.ItemTypeList.Empty)
                 {
                     dragUI.transform.position = mousePos;
                     dragUI.GetComponent<Buy>().buy();

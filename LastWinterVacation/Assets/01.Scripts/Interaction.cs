@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Interaction : MonoBehaviour
 {
-    public string whatIsThisObject;
     enum NPCType
     {
         Farmer,

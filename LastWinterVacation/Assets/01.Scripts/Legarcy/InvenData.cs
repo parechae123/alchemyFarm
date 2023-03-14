@@ -76,7 +76,7 @@ public class InvenData : MonoBehaviour
                     inSlotItem = emptyItem;
                     Amount = 0;
                 }
-            }
+        }
             if (RC.collider == null)
             {
                 Debug.Log("아이템 스왑실패");

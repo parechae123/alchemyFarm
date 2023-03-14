@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Interaction : MonoBehaviour
 {
-    enum NPCType
+    public enum NPCType
     {
         Farmer,
         Miner, 
@@ -22,15 +22,43 @@ public class Interaction : MonoBehaviour
     [SerializeField] private ItemTable[] npcItems;
     public void UIset()
     {
-        if(npctype != NPCType.Farm)
+/*        if(npctype != NPCType.Farm)
         {
-            for(byte i = 0; i < npcItems.Length; i++)
+            Debug.Log("farmer감지");
+            for (byte i = 0; i < npcItems.Length; i++)
             {
                 UI.transform.GetChild(i).GetChild(0).GetComponent<Buy>().SellItem = npcItems[i];
             }
         }
         if(npctype == NPCType.Farm)
         {
+            Debug.Log("farm감지");
+            for(byte i = 1; i < npcItems.Length; i++)
+            {
+                UI.transform.GetChild(i).GetChild(0).GetComponent<InvenData>().inSlotItem = npcItems[i];
+            }
+        }*/
+        switch (npctype)
+        {
+            case NPCType.Farmer:
+                Debug.Log("farmer감지");
+                for (byte i = 0; i < npcItems.Length; i++)
+                {
+                    UI.transform.GetChild(i).GetChild(0).GetComponent<Buy>().SellItem = npcItems[i];
+                }
+                break;
+            case NPCType.Miner:
+                break;
+            case NPCType.Alchemist:
+                break;
+            case NPCType.GeneralStore:
+                break;
+            case NPCType.Farm:
+                for (byte i = 1; i < npcItems.Length; i++)
+                {
+                    UI.transform.GetChild(i).GetChild(0).GetComponent<InvenData>().inSlotItem = npcItems[i];
+                }
+                break;
 
         }
     }

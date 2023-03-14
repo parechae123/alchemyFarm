@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
 
     private bool isUIOpened;
     private bool beforeESC = false;
-    private byte loadShop = 1;
+    public byte loadShop = 1;
 
     private Vector3 cameraAngle;
     [SerializeField] private GameObject cameraRot;

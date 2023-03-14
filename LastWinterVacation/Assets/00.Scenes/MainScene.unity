@@ -522,6 +522,7 @@ GameObject:
   - component: {fileID: 23527420}
   - component: {fileID: 23527419}
   - component: {fileID: 23527418}
+  - component: {fileID: 23527421}
   m_Layer: 3
   m_Name: InvenData
   m_TagString: Untagged
@@ -614,6 +615,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 23527416}
   m_CullTransparentMesh: 1
+--- !u!114 &23527421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23527416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ef8d8ca66f9d4ea0e1922d5adb97b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryManager: {fileID: 497044919}
+  invenNumber: 0
+  inSlotItem: {fileID: 11400000, guid: 9c12e4d04fa8384488cd9ca4fe9fc211, type: 2}
+  emptyItem: {fileID: 11400000, guid: 9c12e4d04fa8384488cd9ca4fe9fc211, type: 2}
+  amountText: {fileID: 853024303}
+  wallet: {fileID: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &28428958
 GameObject:
   m_ObjectHideFlags: 0
@@ -2828,6 +2850,140 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 356679702}
   m_CullTransparentMesh: 1
+--- !u!1 &361808561
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 361808562}
+  - component: {fileID: 361808567}
+  - component: {fileID: 361808566}
+  - component: {fileID: 361808565}
+  - component: {fileID: 361808564}
+  - component: {fileID: 361808563}
+  m_Layer: 6
+  m_Name: Farm (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &361808562
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 361808561}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 9.41}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 926160047}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &361808563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 361808561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29cd87463571e1140b94c0470e46ca33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npctype: 4
+  isActivated: 0
+  UI: {fileID: 497044912}
+  isSlotEmpty: 000000
+  ItemAmount: 000000
+  npcItems:
+  - {fileID: 11400000, guid: 9c12e4d04fa8384488cd9ca4fe9fc211, type: 2}
+  - {fileID: 11400000, guid: 9c12e4d04fa8384488cd9ca4fe9fc211, type: 2}
+  - {fileID: 11400000, guid: 9c12e4d04fa8384488cd9ca4fe9fc211, type: 2}
+--- !u!65 &361808564
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 361808561}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 2.53, z: 5}
+  m_Center: {x: -2.5, y: 1.22, z: 2.5}
+--- !u!64 &361808565
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 361808561}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 43204642838645992, guid: 2ca00a7e0c04965408f4b472f11a9a7b, type: 2}
+--- !u!23 &361808566
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 361808561}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: fdf18c58b725a2f469593ece1786d307, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &361808567
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 361808561}
+  m_Mesh: {fileID: 4300000, guid: cbe0fccbc84c27b479af79284f7693a0, type: 3}
 --- !u!1 &365228735
 GameObject:
   m_ObjectHideFlags: 0
@@ -6631,6 +6787,7 @@ Transform:
   m_Children:
   - {fileID: 1115439359}
   - {fileID: 5132900782288681084}
+  - {fileID: 361808562}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7340,6 +7497,7 @@ GameObject:
   - component: {fileID: 1093063868}
   - component: {fileID: 1093063867}
   - component: {fileID: 1093063866}
+  - component: {fileID: 1093063869}
   m_Layer: 3
   m_Name: InvenData
   m_TagString: Untagged
@@ -7432,6 +7590,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1093063864}
   m_CullTransparentMesh: 1
+--- !u!114 &1093063869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093063864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ef8d8ca66f9d4ea0e1922d5adb97b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryManager: {fileID: 497044919}
+  invenNumber: 0
+  inSlotItem: {fileID: 11400000, guid: 9c12e4d04fa8384488cd9ca4fe9fc211, type: 2}
+  emptyItem: {fileID: 11400000, guid: 9c12e4d04fa8384488cd9ca4fe9fc211, type: 2}
+  amountText: {fileID: 427457020}
+  wallet: {fileID: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &1115439358
 GameObject:
   m_ObjectHideFlags: 0
@@ -13966,6 +14145,7 @@ MonoBehaviour:
   isActivated: 0
   UI: {fileID: 1130300866}
   isSlotEmpty: 00000000
+  ItemAmount: 
   npcItems:
   - {fileID: 11400000, guid: 0948e6aec52f138489ad516b82d3ef6f, type: 2}
   - {fileID: 11400000, guid: 9c12e4d04fa8384488cd9ca4fe9fc211, type: 2}
@@ -14871,6 +15051,7 @@ MonoBehaviour:
   TargetUI: {fileID: 0}
   menuUI: {fileID: 1692966172}
   dragUI: {fileID: 0}
+  NPCinterScript: {fileID: 0}
   moveSpeed: 0.2
   cinemachineFreeLook: {fileID: 197290710}
   cursorIMG: {fileID: 2800000, guid: 82073a8bfd6b8488a89b8796d500d12d, type: 3}
@@ -15740,10 +15921,9 @@ GameObject:
   - component: {fileID: 5144901829978048212}
   - component: {fileID: 5174952829882442392}
   - component: {fileID: 5174952829882442393}
-  - component: {fileID: 5174952829882442394}
   - component: {fileID: 5174952829882442395}
   m_Layer: 6
-  m_Name: SM_Env_Dirt_01
+  m_Name: Farm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15841,23 +16021,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5, y: 2.53, z: 5}
   m_Center: {x: -2.5, y: 1.22, z: 2.5}
---- !u!114 &5174952829882442394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5130619125710981820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29cd87463571e1140b94c0470e46ca33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  npctype: 0
-  isActivated: 0
-  UI: {fileID: 497044912}
-  isSlotEmpty: 
-  npcItems: []
 --- !u!114 &5174952829882442395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15874,9 +16037,10 @@ MonoBehaviour:
   isActivated: 0
   UI: {fileID: 497044912}
   isSlotEmpty: 000000
+  ItemAmount: 000000
   npcItems:
-  - {fileID: 11400000, guid: aff97fb0d1e5aaf43801b3482531021d, type: 2}
-  - {fileID: 11400000, guid: 0948e6aec52f138489ad516b82d3ef6f, type: 2}
+  - {fileID: 11400000, guid: 9c12e4d04fa8384488cd9ca4fe9fc211, type: 2}
+  - {fileID: 11400000, guid: 9c12e4d04fa8384488cd9ca4fe9fc211, type: 2}
   - {fileID: 11400000, guid: 9c12e4d04fa8384488cd9ca4fe9fc211, type: 2}
 --- !u!137 &5193098856324198478
 SkinnedMeshRenderer:

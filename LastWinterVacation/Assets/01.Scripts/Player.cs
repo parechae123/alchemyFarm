@@ -29,6 +29,7 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject TargetUI;
     [SerializeField] private GameObject menuUI;
     [SerializeField] private GameObject dragUI;
+    [SerializeField] private Interaction NPCinterScript;
 
     [SerializeField] private float moveSpeed;
     [SerializeField] private CinemachineFreeLook cinemachineFreeLook;
@@ -94,6 +95,13 @@ public class Player : MonoBehaviour
                 TargetUI.SetActive(false);
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
+                if (NPCinterScript != null)
+                {
+                    if (NPCinterScript.npctype == Interaction.NPCType.Farm)
+                    {
+                        NPCinterScript.saveItems();
+                    }
+                }
             }
         }
 
@@ -123,6 +131,7 @@ public class Player : MonoBehaviour
             if (isUIOpened == false&&loadShop == 1)
             {
                 ++loadShop;
+                NPCinterScript = npcHit.collider.gameObject.GetComponent<Interaction>();
                 npcHit.collider.GetComponent<Interaction>().UIset();
             }
         }
@@ -165,7 +174,7 @@ public class Player : MonoBehaviour
         {
             if(dragUI == null)
             {
-                Debug.Log("드래그 ui널 반환");
+                
             }
             else
             {
@@ -203,7 +212,6 @@ public class Player : MonoBehaviour
                     if(TargetUI != Inventory)
                     {
                         Inventory.SetActive(true);
-                        Debug.Log("엑티브 트루");
                         TargetUI = interactionUI;
                         uiControl();
                         Anim.SetBool("Walk", false);
@@ -211,7 +219,6 @@ public class Player : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("엑티브 펄스");
                     Inventory.SetActive(false);
                     uiControl();
                     TargetUI = null;
@@ -219,7 +226,6 @@ public class Player : MonoBehaviour
             }
             else if (interactionUI == null)
             {
-                Debug.Log("null반환");
                 cinemachineFreeLook.m_YAxis.m_MaxSpeed = 2;
                 cinemachineFreeLook.m_XAxis.m_MaxSpeed = 300;
             }
@@ -275,6 +281,13 @@ public class Player : MonoBehaviour
                 TargetUI.SetActive(false);
             }
             TargetUI = null;
+            if (NPCinterScript != null)
+            {
+                if (NPCinterScript.npctype == Interaction.NPCType.Farm)
+                {
+                    NPCinterScript.saveItems();
+                }
+            }
         }
     }
 }

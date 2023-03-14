@@ -59,7 +59,6 @@ public class InvenData : MonoBehaviour
             RC = Physics2D.CircleCast(transform.position, 10, Vector2.zero, 0, layerMask,0,300);
             if (RC.collider != null)
             {
-                Debug.Log("아이템 스왑");
                 ItemTable swaper = inSlotItem;
                 byte amountSwap = Amount;
                 if (RC.collider.gameObject.TryGetComponent<InvenData>(out InvenData Component))
@@ -71,15 +70,13 @@ public class InvenData : MonoBehaviour
                 }
                 if (RC.collider.gameObject.TryGetComponent<Buy>(out Buy sellCom))
                 {
-                    Debug.Log("아이템판매");
                     wallet.Gold += inSlotItem.itemValue*Amount;
                     inSlotItem = emptyItem;
                     Amount = 0;
                 }
-        }
+            }
             if (RC.collider == null)
             {
-                Debug.Log("아이템 스왑실패");
             }
         //여기다가 레이넣자
         yield return new WaitForSeconds(0.05f);

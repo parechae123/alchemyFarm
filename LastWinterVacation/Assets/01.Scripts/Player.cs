@@ -163,6 +163,13 @@ public class Player : MonoBehaviour
             if (hit.collider != null)
             {
                 dragUI = hit.collider.gameObject;
+                if(dragUI.layer == 8)
+                {
+                    NPCinterScript.saveItems();
+                    dragUI.GetComponent<PlantButton>().TargetFarm = NPCinterScript;
+                    dragUI.GetComponent<PlantButton>().SeedInput = NPCinterScript.npcItems[0];
+                    dragUI.GetComponent<PlantButton>().PlantButtonClick();
+                }
             }
             else if (hit.collider == null)
             {

@@ -5,12 +5,21 @@ using UnityEngine.InputSystem;
 
 public class PlantButton : MonoBehaviour
 {
-    public InvenData SeedInput;
-    public void OnButtonClick()
+    public ItemTable SeedInput;
+    public Interaction TargetFarm;
+    private bool inDelay = false;
+    public void PlantButtonClick()
     {
-        if (SeedInput.inSlotItem.itemType == ItemTable.ItemTypeList.Seed)
+        if (SeedInput.itemType == ItemTable.ItemTypeList.Seed&&!inDelay)
         {
-            Debug.Log("플랜팅 버튼 눌림");
+            inDelay = true;
+            StartCoroutine(ButtonDelay());
+            Debug.Log("씨앗 인식");
         }
+    }
+    IEnumerator ButtonDelay()
+    {
+        yield return new WaitForSeconds(10);
+        inDelay = false;
     }
 }

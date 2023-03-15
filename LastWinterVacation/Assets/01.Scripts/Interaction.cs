@@ -20,6 +20,17 @@ public class Interaction : MonoBehaviour
     public GameObject UI;
     [SerializeField] private bool[] isSlotEmpty;
     [SerializeField] private byte[] ItemAmount;
+    public byte[] itemAmount 
+    { 
+        get { return ItemAmount; 
+            
+        } 
+        
+        set { 
+            ItemAmount = value;
+            saveItems();  
+        } 
+    }
     [SerializeField] private ItemTable[] npcItems;
     public void UIset()
     {
@@ -69,5 +80,23 @@ public class Interaction : MonoBehaviour
             npcItems[i] = UI.transform.GetChild(i + 1).GetChild(0).GetComponent<InvenData>().inSlotItem;
             ItemAmount[i] = UI.transform.GetChild(i + 1).GetChild(0).GetComponent<InvenData>().Amount;
         }
+        StartCoroutine(Planting());
+    }
+    IEnumerator Planting()
+    {
+        byte ang = 0;
+        if (npcItems[0].itemType == ItemTable.ItemTypeList.Seed && ang ==0)
+        {
+            ang++;
+            ItemTable tmpInven = npcItems[0];
+            for (byte i =20; i>= ItemAmount[1];)
+            {
+                yield return new WaitForSeconds(2);
+                itemAmount[0] -= 1;
+                itemAmount[1] += 1;
+                npcItems[1] = tmpInven;
+            }
+        }
+
     }
 }

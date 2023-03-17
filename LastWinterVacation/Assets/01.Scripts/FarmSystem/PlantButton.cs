@@ -19,7 +19,8 @@ public class PlantButton : MonoBehaviour
     }
     IEnumerator ButtonDelay()
     {
-        yield return new WaitForSeconds(10);
+        TargetFarm.ToPlantingBT();
+        yield return new WaitForSeconds(40);
         inDelay = false;
     }
 }

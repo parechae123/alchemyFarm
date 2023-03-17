@@ -69,6 +69,9 @@ public class Interaction : MonoBehaviour
             npcItems[i] = UI.transform.GetChild(i + 1).GetChild(0).GetComponent<InvenData>().inSlotItem;
             ItemAmount[i] = UI.transform.GetChild(i + 1).GetChild(0).GetComponent<InvenData>().Amount;
         }
+    }
+    public void ToPlantingBT()
+    {
         StartCoroutine(Planting());
     }
     IEnumerator Planting()

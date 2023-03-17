@@ -168,6 +168,7 @@ public class Player : MonoBehaviour
                     NPCinterScript.saveItems();
                     dragUI.GetComponent<PlantButton>().TargetFarm = NPCinterScript;
                     dragUI.GetComponent<PlantButton>().SeedInput = NPCinterScript.npcItems[0];
+                    dragUI.GetComponent<PlantButton>().TargetFarm = NPCinterScript;
                     dragUI.GetComponent<PlantButton>().PlantButtonClick();
                 }
             }

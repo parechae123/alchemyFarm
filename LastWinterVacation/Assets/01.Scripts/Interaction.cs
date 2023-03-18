@@ -70,9 +70,12 @@ public class Interaction : MonoBehaviour
             ItemAmount[i] = UI.transform.GetChild(i + 1).GetChild(0).GetComponent<InvenData>().Amount;
         }
     }
-    public void ToPlantingBT()
+    public void ToPlantingBT(bool alreadyPlanting)
     {
-        StartCoroutine(Planting());
+        if (!alreadyPlanting)
+        {
+            StartCoroutine(Planting());
+        }
     }
     IEnumerator Planting()
     {
@@ -80,7 +83,7 @@ public class Interaction : MonoBehaviour
         {
             ItemTable tmpInven = npcItems[0];
             UI.transform.GetChild(2).GetChild(0).GetComponent<InvenData>().inSlotItem = tmpInven;
-            for (byte i =20; i>= ItemAmount[1];)
+            for (byte i =19; i>= ItemAmount[1];)
             {
                 if(ItemAmount[0] > 1)
                 {
@@ -90,6 +93,10 @@ public class Interaction : MonoBehaviour
                     ItemAmount[1] += 1;
                     UI.transform.GetChild(2).GetChild(0).GetComponent<InvenData>().Amount = ItemAmount[1];
                     UI.transform.GetChild(1).GetChild(0).GetComponent<InvenData>().Amount = ItemAmount[0];
+                    if (ItemAmount[0] == 0 || ItemAmount[1] > 20)
+                    {
+                        break;
+                    }
                 }
                 
             }

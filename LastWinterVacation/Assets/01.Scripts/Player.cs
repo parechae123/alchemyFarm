@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject TargetUI;
     [SerializeField] private GameObject menuUI;
     [SerializeField] private GameObject dragUI;
-    [SerializeField] private Interaction NPCinterScript;
+    public Interaction NPCinterScript;
 
     [SerializeField] private float moveSpeed;
     [SerializeField] private CinemachineFreeLook cinemachineFreeLook;
@@ -144,6 +144,7 @@ public class Player : MonoBehaviour
         {
             interactionUI = null;
             loadShop = 1;
+            NPCinterScript= null;
         }
     }
     public void OnMove(InputAction.CallbackContext ctx)

@@ -21,6 +21,7 @@ public class Interaction : MonoBehaviour
     [SerializeField] private bool[] isSlotEmpty;
     [SerializeField] private byte[] ItemAmount;
     public ItemTable[] npcItems;
+    [SerializeField] private GameObject Player;
     public void UIset()
     {
 /*        if(npctype != NPCType.Farm)
@@ -92,8 +93,11 @@ public class Interaction : MonoBehaviour
                     npcItems[1] = tmpInven;
                     ItemAmount[0] -= 1;
                     ItemAmount[1] += 1;
-                    UI.transform.GetChild(2).GetChild(0).GetComponent<InvenData>().Amount = ItemAmount[1];
-                    UI.transform.GetChild(1).GetChild(0).GetComponent<InvenData>().Amount = ItemAmount[0];
+                    if (Player.GetComponent<Player>().NPCinterScript == this)
+                    {
+                        UI.transform.GetChild(2).GetChild(0).GetComponent<InvenData>().Amount = ItemAmount[1];
+                        UI.transform.GetChild(1).GetChild(0).GetComponent<InvenData>().Amount = ItemAmount[0];
+                    }
                     if (ItemAmount[0] == 0 || ItemAmount[1] > 20)
                     {
                         break;

@@ -8,15 +8,11 @@ public class PlantButton : MonoBehaviour
 {
     public ItemTable SeedInput;
     public Interaction TargetFarm;
-    private Image BTcolor;
+    public Image BTcolor;
     private bool inDelay = false;
-    private void Awake()
-    {
-        BTcolor = GetComponent<Image>();
-    }
     public void PlantButtonClick()
     {
-        if (SeedInput.itemType == ItemTable.ItemTypeList.Seed&&!inDelay&&!TargetFarm.plantingActive)
+        if (SeedInput.itemType == ItemTable.ItemTypeList.Seed&&!inDelay)
         {
             StartCoroutine(ButtonDelay());
             Debug.Log("¾¾¾Ñ ÀÎ½Ä");
@@ -36,16 +32,19 @@ public class PlantButton : MonoBehaviour
     {
         Debug.Log("Log0");
         Debug.Log(TargetFarm.plantingActive);
-/*        if (TargetFarm.plantingActive)
+        if (TargetFarm.plantingActive)
         {
+            inDelay = true;
             Debug.Log("Log1");
             BTcolor.color = Color.gray;
         }
         else
         {
-            Debug.Log("Log2");
+            inDelay=false;
             BTcolor.color = Color.white;
-        }*/
+            Debug.Log("Log2");
+
+        }
         Debug.Log("Log3");
     }
 }

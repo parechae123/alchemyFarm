@@ -16,7 +16,7 @@ public class PlantButton : MonoBehaviour
     }
     public void PlantButtonClick()
     {
-        if (SeedInput.itemType == ItemTable.ItemTypeList.Seed&&!inDelay)
+        if (SeedInput.itemType == ItemTable.ItemTypeList.Seed&&!inDelay&&!TargetFarm.plantingActive)
         {
             StartCoroutine(ButtonDelay());
             Debug.Log("¾¾¾Ñ ÀÎ½Ä");
@@ -31,5 +31,21 @@ public class PlantButton : MonoBehaviour
         yield return new WaitForSeconds(40);
         BTcolor.color = Color.white;
         inDelay = false;
+    }
+    public void colorState()
+    {
+        Debug.Log("Log0");
+        Debug.Log(TargetFarm.plantingActive);
+/*        if (TargetFarm.plantingActive)
+        {
+            Debug.Log("Log1");
+            BTcolor.color = Color.gray;
+        }
+        else
+        {
+            Debug.Log("Log2");
+            BTcolor.color = Color.white;
+        }*/
+        Debug.Log("Log3");
     }
 }

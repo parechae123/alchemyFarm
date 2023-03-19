@@ -3169,7 +3169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npctype: 4
-  isActivated: 0
+  plantingActive: 0
   UI: {fileID: 497044912}
   isSlotEmpty: 000000
   ItemAmount: 000000
@@ -4907,7 +4907,7 @@ GameObject:
   - component: {fileID: 588366911}
   - component: {fileID: 588366912}
   m_Layer: 8
-  m_Name: Button
+  m_Name: PlantBTN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14726,7 +14726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npctype: 0
-  isActivated: 0
+  plantingActive: 0
   UI: {fileID: 1130300866}
   isSlotEmpty: 00000000
   ItemAmount: 
@@ -15629,6 +15629,7 @@ MonoBehaviour:
   mouseDragEnd: {x: 0, y: 0}
   rayLength: {x: 0, y: 0, z: 0}
   loadShop: 1
+  plantBTN: {fileID: 588366911}
   cameraRot: {fileID: 1543221458}
   interactionUI: {fileID: 0}
   Inventory: {fileID: 663759658}
@@ -16618,7 +16619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npctype: 4
-  isActivated: 0
+  plantingActive: 0
   UI: {fileID: 497044912}
   isSlotEmpty: 000000
   ItemAmount: 000000

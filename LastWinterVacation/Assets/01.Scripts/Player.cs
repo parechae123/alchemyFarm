@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     private bool beforeESC = false;
     public byte loadShop = 1;
 
+    public PlantButton plantBTN;
     private Vector3 cameraAngle;
     [SerializeField] private GameObject cameraRot;
     [SerializeField] private GameObject interactionUI;
@@ -133,6 +134,10 @@ public class Player : MonoBehaviour
                 ++loadShop;
                 NPCinterScript = npcHit.collider.gameObject.GetComponent<Interaction>();
                 npcHit.collider.GetComponent<Interaction>().UIset();
+                if(interactionUI.name == "FarmUI")
+                {
+                    plantBTN.TargetFarm = NPCinterScript;
+                }
             }
         }
         else
@@ -221,9 +226,15 @@ public class Player : MonoBehaviour
                     {
                         Inventory.SetActive(true);
                         TargetUI = interactionUI;
+                        if (TargetUI.name == "FarmUI")
+                        {
+                            plantBTN.colorState();
+                        }
                         uiControl();
                         Anim.SetBool("Walk", false);
+
                     }
+
                 }
                 else
                 {

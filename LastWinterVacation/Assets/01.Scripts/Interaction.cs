@@ -16,7 +16,7 @@ public class Interaction : MonoBehaviour
     }
     public NPCType npctype;
 
-    public bool isActivated = false;
+    public bool plantingActive = false;
     public GameObject UI;
     [SerializeField] private bool[] isSlotEmpty;
     [SerializeField] private byte[] ItemAmount;
@@ -74,6 +74,7 @@ public class Interaction : MonoBehaviour
     {
         if (!alreadyPlanting)
         {
+            plantingActive = true;
             StartCoroutine(Planting());
         }
     }
@@ -98,9 +99,9 @@ public class Interaction : MonoBehaviour
                         break;
                     }
                 }
-                
             }
         }
+        plantingActive = false;
 
     }
 }

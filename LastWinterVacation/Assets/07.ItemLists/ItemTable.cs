@@ -28,8 +28,8 @@ public class ItemTable : ScriptableObject
     public byte itemNumber { get { return ItemNumber; } }
 
     [SerializeField]
-    private GameObject Model;
-    public GameObject model { get { return Model; } }
+    private GameObject[] Model = new GameObject[5];
+    public GameObject[] model { get { return Model; } }
     [SerializeField]
     private int ItemValue;
     public int itemValue { get { return ItemValue; } }

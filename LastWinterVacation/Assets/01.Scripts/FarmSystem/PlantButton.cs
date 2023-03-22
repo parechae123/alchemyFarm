@@ -30,21 +30,16 @@ public class PlantButton : MonoBehaviour
     }
     public void colorState()
     {
-        Debug.Log("Log0");
-        Debug.Log(TargetFarm.plantingActive);
         if (TargetFarm.plantingActive)
         {
             inDelay = true;
-            Debug.Log("Log1");
             BTcolor.color = Color.gray;
         }
         else
         {
             inDelay=false;
             BTcolor.color = Color.white;
-            Debug.Log("Log2");
 
         }
-        Debug.Log("Log3");
     }
 }

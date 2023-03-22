@@ -17,5 +17,10 @@ MonoBehaviour:
   ItemType: 1
   Amount: 0
   ItemNumber: 1
-  Model: {fileID: 1347292578903898, guid: 53e5ab917382c9749a58810d6e170537, type: 3}
+  Model:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   ItemValue: 10

@@ -84,35 +84,41 @@ public class Interaction : MonoBehaviour
         if (npcItems[0].itemType == ItemTable.ItemTypeList.Seed)
         {
             ItemTable tmpInven = npcItems[0];
-            UI.transform.GetChild(2).GetChild(0).GetComponent<InvenData>().inSlotItem = tmpInven;
             Debug.Log("플랜팅 시작");
-            for (byte i =19; i>= ItemAmount[1];)
+            if (npcItems[1].itemType == ItemTable.ItemTypeList.Empty || npcItems[0] == npcItems[1])
             {
-                Debug.Log("포문 돌이");
-                Debug.Log("NPCItem : " + npcItems[0].itemNumber);
-                Debug.Log("TMPItem : " + tmpInven.itemNumber);
-
-                if (npcItems[0].itemNumber != tmpInven.itemNumber)
-                {
-                    Debug.Log("인풋과 아웃풋이 불일치");
-                    break;
-                }
-                if (ItemAmount[0] == 0 || ItemAmount[1] > 20)
-                {
-                    break;
-                }
-                if (ItemAmount[0] >= 1)
+                UI.GetComponent<InventoryManager>().slot[1].inSlotItem = tmpInven;
+                for (byte i = 19; i >= ItemAmount[1];)
                 {
                     yield return new WaitForSeconds(2);
-                    ItemAmount[0] -= 1;
-                    ItemAmount[1] += 1;
+                    if (ItemAmount[0] == 0 || ItemAmount[1] > 20 || npcItems[0].itemNumber != tmpInven.itemNumber)
+                    {
+                        Debug.Log("취소");
+                        break;
+                    }
+                    if (ItemAmount[0] >= 1 && npcItems[0].itemNumber == tmpInven.itemNumber)
+                    {
+                        ItemAmount[0] -= 1;
+                        ItemAmount[1] += 1;
+                        Debug.Log("씨앗 증가");
+                    }
                     if (Player.GetComponent<Player>().NPCinterScript == this)
                     {
-                        UI.transform.GetChild(2).GetChild(0).GetComponent<InvenData>().Amount = ItemAmount[1];
-                        UI.transform.GetChild(1).GetChild(0).GetComponent<InvenData>().Amount = ItemAmount[0];
+                        /*UI.GetComponent<InventoryManager>().slot[0].Amount -= 1;
+                        UI.GetComponent<InventoryManager>().slot[0].Amount += 1;*/
+                        npcItems[0] = UI.GetComponent<InventoryManager>().slot[0].inSlotItem;
+                        ItemAmount[0] = UI.GetComponent<InventoryManager>().slot[0].Amount;
+                        UI.GetComponent<InventoryManager>().slot[0].Amount -= 1;
+                        npcItems[1] = UI.GetComponent<InventoryManager>().slot[1].inSlotItem;
+                        ItemAmount[1] = UI.GetComponent<InventoryManager>().slot[1].Amount;
+                        UI.GetComponent<InventoryManager>().slot[1].Amount += 1;
+                        /*UI.transform.GetChild(2).GetChild(0).GetComponent<InvenData>().Amount = ItemAmount[1];
+                        UI.transform.GetChild(1).GetChild(0).GetComponent<InvenData>().Amount = ItemAmount[0];*/
+                        Debug.Log("정보 저장");
                     }
                 }
             }
+
         }
         Debug.Log("끝");
         plantingActive = false;

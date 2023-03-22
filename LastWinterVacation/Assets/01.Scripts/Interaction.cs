@@ -85,12 +85,25 @@ public class Interaction : MonoBehaviour
         {
             ItemTable tmpInven = npcItems[0];
             UI.transform.GetChild(2).GetChild(0).GetComponent<InvenData>().inSlotItem = tmpInven;
+            Debug.Log("플랜팅 시작");
             for (byte i =19; i>= ItemAmount[1];)
             {
-                if(ItemAmount[0] > 1)
+                Debug.Log("포문 돌이");
+                Debug.Log("NPCItem : " + npcItems[0].itemNumber);
+                Debug.Log("TMPItem : " + tmpInven.itemNumber);
+
+                if (npcItems[0].itemNumber != tmpInven.itemNumber)
+                {
+                    Debug.Log("인풋과 아웃풋이 불일치");
+                    break;
+                }
+                if (ItemAmount[0] == 0 || ItemAmount[1] > 20)
+                {
+                    break;
+                }
+                if (ItemAmount[0] >= 1)
                 {
                     yield return new WaitForSeconds(2);
-                    npcItems[1] = tmpInven;
                     ItemAmount[0] -= 1;
                     ItemAmount[1] += 1;
                     if (Player.GetComponent<Player>().NPCinterScript == this)
@@ -98,13 +111,10 @@ public class Interaction : MonoBehaviour
                         UI.transform.GetChild(2).GetChild(0).GetComponent<InvenData>().Amount = ItemAmount[1];
                         UI.transform.GetChild(1).GetChild(0).GetComponent<InvenData>().Amount = ItemAmount[0];
                     }
-                    if (ItemAmount[0] == 0 || ItemAmount[1] > 20)
-                    {
-                        break;
-                    }
                 }
             }
         }
+        Debug.Log("끝");
         plantingActive = false;
 
     }

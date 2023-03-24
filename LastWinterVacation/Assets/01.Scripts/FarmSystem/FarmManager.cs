@@ -10,6 +10,10 @@ public class FarmManager : MonoBehaviour
 
     public void GrowingPlants(byte plantArr,ItemTable tmpSeed)
     {
-        plants[plantArr-1].SeedInfo = tmpSeed;
+        if(plantArr < 20)
+        {
+            plants[plantArr].SeedInfo = tmpSeed;
+        }
+
     }
 }

@@ -92,6 +92,7 @@ public class Interaction : MonoBehaviour
                 for (byte i = 19; i >= ItemAmount[1];)
                 {
                     yield return new WaitForSeconds(2);
+                    farmManager.GrowingPlants(ItemAmount[1], tmpInven);
                     if (ItemAmount[0] == 0 || ItemAmount[1] > 20 || npcItems[0].itemNumber != tmpInven.itemNumber)
                     {
                         Debug.Log("Ãë¼Ò");
@@ -101,7 +102,6 @@ public class Interaction : MonoBehaviour
                     {
                         ItemAmount[0] -= 1;
                         ItemAmount[1] += 1;
-                        farmManager.GrowingPlants(ItemAmount[1],tmpInven);
                         Debug.Log("¾¾¾Ñ Áõ°¡");
                     }
                     if (Player.GetComponent<Player>().NPCinterScript == this)

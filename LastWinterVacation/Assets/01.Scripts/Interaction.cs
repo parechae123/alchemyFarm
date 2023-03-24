@@ -16,6 +16,7 @@ public class Interaction : MonoBehaviour
     }
     public NPCType npctype;
 
+    public FarmManager farmManager;
     public bool plantingActive = false;
     public GameObject UI;
     [SerializeField] private bool[] isSlotEmpty;
@@ -100,6 +101,7 @@ public class Interaction : MonoBehaviour
                     {
                         ItemAmount[0] -= 1;
                         ItemAmount[1] += 1;
+                        farmManager.GrowingPlants(ItemAmount[1],tmpInven);
                         Debug.Log("¾¾¾Ñ Áõ°¡");
                     }
                     if (Player.GetComponent<Player>().NPCinterScript == this)

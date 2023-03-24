@@ -111,7 +111,6 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         tr = GetComponent<Transform>();
         Anim = GetComponent<Animator>();
         Cursor.SetCursor(cursorIMG, mousePos, CursorMode.Auto);

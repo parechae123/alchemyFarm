@@ -4,46 +4,36 @@ using UnityEngine;
 
 public class PlantState : MonoBehaviour
 {
-    public ItemTable SeedInfo;
-    private byte PlantLV;
-    public byte plantLV
+    [SerializeField]private ItemTable seedInfo;
+    public ItemTable SeedInfo
     {
-        get { return PlantLV; }
+        get { return seedInfo; }
         set 
-        {
-            PlantLV = value;
-            Debug.Log(plantLV);
-            switch (plantLV)
-            {
-                case 1:
-                    Debug.Log("¿œ");
-                    break;
-                case 2:
-                    Debug.Log("¿Ã");
-                    break;
-                case 3:
-                    Debug.Log("ªÔ");
-                    break;
-                case 4:
-                    Debug.Log("ªÁ");
-                    break;
-                case 5:
-                    Debug.Log("ø¿");
-                    break;
-            }
+        { 
+            seedInfo = value;
+            StartCoroutine(Grower());
         }
     }
+    private byte plantLV = 0;
+    public MeshRenderer plantRenderer;
+    public MeshFilter plantMeshFilter;
     private void Start()
     {
-        StartCoroutine(Grower());
+        plantRenderer = GetComponent<MeshRenderer>();
+        plantMeshFilter = GetComponent<MeshFilter>();
     }
     
     IEnumerator Grower()
     {
-        for (byte i = 0; i<5; i++)
+        for(plantLV = 0;plantLV < 5; plantLV++)
         {
-            yield return new WaitForSeconds(2);
-            plantLV++;
+            if(plantLV <= 3)
+            {
+                plantRenderer = seedInfo.model[plantLV].GetComponent<MeshRenderer>();
+                plantMeshFilter = seedInfo.model[plantLV].GetComponent<MeshFilter>();
+            }
+            yield return new WaitForSeconds(20);
         }
+
     }
 }

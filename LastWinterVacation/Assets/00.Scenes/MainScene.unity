@@ -728,7 +728,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &31652362
 Transform:
   m_ObjectHideFlags: 0
@@ -819,7 +819,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aff8884f5d77214080f9a010978167e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SeedInfo: {fileID: 0}
 --- !u!1 &87634980
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,7 +914,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &98332231
 Transform:
   m_ObjectHideFlags: 0
@@ -1006,7 +1005,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aff8884f5d77214080f9a010978167e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SeedInfo: {fileID: 0}
 --- !u!1 &100486469
 GameObject:
   m_ObjectHideFlags: 0
@@ -2175,7 +2173,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &277574425
 Transform:
   m_ObjectHideFlags: 0
@@ -2266,7 +2264,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aff8884f5d77214080f9a010978167e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SeedInfo: {fileID: 0}
 --- !u!1 &284159855
 GameObject:
   m_ObjectHideFlags: 3
@@ -2548,7 +2545,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &297243196
 Transform:
   m_ObjectHideFlags: 0
@@ -2639,7 +2636,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aff8884f5d77214080f9a010978167e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SeedInfo: {fileID: 0}
 --- !u!1 &298907140
 GameObject:
   m_ObjectHideFlags: 0
@@ -3614,6 +3610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npctype: 4
+  farmManager: {fileID: 1659738126}
   plantingActive: 0
   UI: {fileID: 497044912}
   isSlotEmpty: 000000
@@ -4134,7 +4131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &420749680
 Transform:
   m_ObjectHideFlags: 0
@@ -4225,7 +4222,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aff8884f5d77214080f9a010978167e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SeedInfo: {fileID: 0}
 --- !u!1 &427457018
 GameObject:
   m_ObjectHideFlags: 0
@@ -5724,7 +5720,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &623142213
 Transform:
   m_ObjectHideFlags: 0
@@ -5815,7 +5811,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aff8884f5d77214080f9a010978167e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SeedInfo: {fileID: 0}
 --- !u!1 &625513341
 GameObject:
   m_ObjectHideFlags: 0
@@ -5970,7 +5965,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &628016856
 Transform:
   m_ObjectHideFlags: 0
@@ -6061,7 +6056,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aff8884f5d77214080f9a010978167e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SeedInfo: {fileID: 0}
 --- !u!1 &663759658
 GameObject:
   m_ObjectHideFlags: 0
@@ -6287,7 +6281,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &685183629
 Transform:
   m_ObjectHideFlags: 0
@@ -6378,7 +6372,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aff8884f5d77214080f9a010978167e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SeedInfo: {fileID: 0}
 --- !u!1 &697568610
 GameObject:
   m_ObjectHideFlags: 0
@@ -6920,7 +6913,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &744302678
 Transform:
   m_ObjectHideFlags: 0
@@ -7011,7 +7004,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aff8884f5d77214080f9a010978167e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SeedInfo: {fileID: 0}
 --- !u!1 &753903845
 GameObject:
   m_ObjectHideFlags: 0
@@ -8607,7 +8599,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &960867096
 Transform:
   m_ObjectHideFlags: 0
@@ -8698,7 +8690,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aff8884f5d77214080f9a010978167e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SeedInfo: {fileID: 0}
 --- !u!1 &998511816
 GameObject:
   m_ObjectHideFlags: 0
@@ -9065,7 +9056,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1058067926
 Transform:
   m_ObjectHideFlags: 0
@@ -9156,7 +9147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aff8884f5d77214080f9a010978167e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SeedInfo: {fileID: 0}
 --- !u!1 &1065576695
 GameObject:
   m_ObjectHideFlags: 0
@@ -10238,7 +10228,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1251331527
 Transform:
   m_ObjectHideFlags: 0
@@ -10329,7 +10319,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aff8884f5d77214080f9a010978167e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SeedInfo: {fileID: 0}
 --- !u!1 &1269323542
 GameObject:
   m_ObjectHideFlags: 0
@@ -11651,7 +11640,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1522984299
 Transform:
   m_ObjectHideFlags: 0
@@ -11742,7 +11731,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aff8884f5d77214080f9a010978167e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SeedInfo: {fileID: 0}
 --- !u!1 &1525071049
 GameObject:
   m_ObjectHideFlags: 0
@@ -12041,7 +12029,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1548662068
 Transform:
   m_ObjectHideFlags: 0
@@ -12132,7 +12120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aff8884f5d77214080f9a010978167e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SeedInfo: {fileID: 0}
 --- !u!1 &1550200165
 GameObject:
   m_ObjectHideFlags: 0
@@ -12729,6 +12716,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1659738125}
+  - component: {fileID: 1659738126}
   m_Layer: 0
   m_Name: FarmManager
   m_TagString: Untagged
@@ -12771,6 +12759,39 @@ Transform:
   m_Father: {fileID: 361808562}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1659738126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659738124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f276c7b89454d24ba17092e1a5f5d5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plants:
+  - {fileID: 1058067930}
+  - {fileID: 1813774084}
+  - {fileID: 2050978056}
+  - {fileID: 1857446614}
+  - {fileID: 628016860}
+  - {fileID: 31652366}
+  - {fileID: 960867100}
+  - {fileID: 277574429}
+  - {fileID: 2106270843}
+  - {fileID: 420749684}
+  - {fileID: 1548662072}
+  - {fileID: 1522984303}
+  - {fileID: 1251331531}
+  - {fileID: 744302682}
+  - {fileID: 623142217}
+  - {fileID: 685183633}
+  - {fileID: 98332235}
+  - {fileID: 1866254753}
+  - {fileID: 1788669011}
+  - {fileID: 297243200}
 --- !u!1 &1670272523
 GameObject:
   m_ObjectHideFlags: 0
@@ -13222,7 +13243,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1788669007
 Transform:
   m_ObjectHideFlags: 0
@@ -13313,7 +13334,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aff8884f5d77214080f9a010978167e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SeedInfo: {fileID: 0}
 --- !u!1 &1813774079
 GameObject:
   m_ObjectHideFlags: 0
@@ -13333,7 +13353,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1813774080
 Transform:
   m_ObjectHideFlags: 0
@@ -13424,7 +13444,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aff8884f5d77214080f9a010978167e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SeedInfo: {fileID: 0}
 --- !u!1 &1825561049
 GameObject:
   m_ObjectHideFlags: 0
@@ -13744,7 +13763,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1857446610
 Transform:
   m_ObjectHideFlags: 0
@@ -13835,7 +13854,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aff8884f5d77214080f9a010978167e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SeedInfo: {fileID: 0}
 --- !u!1 &1866254748
 GameObject:
   m_ObjectHideFlags: 0
@@ -13855,7 +13873,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1866254749
 Transform:
   m_ObjectHideFlags: 0
@@ -13946,7 +13964,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aff8884f5d77214080f9a010978167e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SeedInfo: {fileID: 0}
 --- !u!1 &1909383059
 GameObject:
   m_ObjectHideFlags: 0
@@ -14913,7 +14930,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2050978052
 Transform:
   m_ObjectHideFlags: 0
@@ -15004,7 +15021,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aff8884f5d77214080f9a010978167e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SeedInfo: {fileID: 0}
 --- !u!1 &2059099313
 GameObject:
   m_ObjectHideFlags: 0
@@ -15101,7 +15117,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2106270839
 Transform:
   m_ObjectHideFlags: 0
@@ -15192,7 +15208,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aff8884f5d77214080f9a010978167e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SeedInfo: {fileID: 0}
 --- !u!1 &2117935053
 GameObject:
   m_ObjectHideFlags: 0
@@ -17002,6 +17017,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npctype: 0
+  farmManager: {fileID: 0}
   plantingActive: 0
   UI: {fileID: 1130300866}
   isSlotEmpty: 00000000
@@ -18896,6 +18912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npctype: 4
+  farmManager: {fileID: 0}
   plantingActive: 0
   UI: {fileID: 497044912}
   isSlotEmpty: 000000

@@ -54,6 +54,10 @@ public class Interaction : MonoBehaviour
             case NPCType.Alchemist:
                 break;
             case NPCType.GeneralStore:
+                for (byte i = 0; i < npcItems.Length; i++)
+                {
+                    UI.transform.GetChild(i).GetChild(0).GetComponent<Buy>().SellItem = npcItems[i];
+                }
                 break;
             case NPCType.Farm:
                 for (byte i = 0; i < npcItems.Length; i++)

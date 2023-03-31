@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class CameraRaycaster : MonoBehaviour
@@ -8,9 +9,12 @@ public class CameraRaycaster : MonoBehaviour
     private RaycastHit groundHit;
     public Vector3 rayPos;
     private GameObject cube;
+    public BoxCollider targetColl;
     private void Awake()
     {
         cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        targetColl = cube.GetComponent<BoxCollider>();
+        targetColl.isTrigger = true;
     }
     void Update()
     {
@@ -22,7 +26,7 @@ public class CameraRaycaster : MonoBehaviour
             rayPos = groundHit.point;
             cube.transform.position = rayPos;
             cube.transform.rotation = new Quaternion(0, transform.rotation.y, 0, transform.rotation.w);
-            Debug.Log(cube.transform.rotation);
+            Debug.DrawLine(targetColl.bounds.min, targetColl.bounds.max);
         }
         else
         {

@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
+using UnityEditor.IMGUI.Controls;
 using UnityEngine;
+
+
 
 public class CameraRaycaster : MonoBehaviour
 {
@@ -15,22 +18,31 @@ public class CameraRaycaster : MonoBehaviour
         cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
         targetColl = cube.GetComponent<BoxCollider>();
         targetColl.isTrigger = true;
+        GetBlockInfo(cube);
     }
-    void Update()
+    public void GetBlockInfo(GameObject preview)
     {
-        
-        Ray ray = new Ray(transform.position, transform.forward * 10);
-        if (Physics.Raycast(ray, out groundHit, 10, isGround))
+        MeshFilter filter = preview.GetComponent<MeshFilter>();
+        preview.GetComponent<MeshRenderer>().material = null;
+        StartCoroutine(previewer(preview,filter));
+    }
+    IEnumerator previewer(GameObject preview,MeshFilter filter)
+    {
+        while (true)
         {
-            Debug.DrawRay(transform.position, transform.forward * 10, Color.red);
-            rayPos = groundHit.point;
-            cube.transform.position = rayPos;
-            cube.transform.rotation = new Quaternion(0, transform.rotation.y, 0, transform.rotation.w);
-            Debug.DrawLine(targetColl.bounds.min, targetColl.bounds.max);
-        }
-        else
-        {
-            rayPos = new Vector3(0,0,0);
+            yield return new WaitForEndOfFrame();
+            Ray ray = new Ray(transform.position, transform.forward * 10);
+            if (Physics.Raycast(ray, out groundHit, 10, isGround))
+            {
+                Debug.DrawRay(transform.position, transform.forward * 10, Color.red);
+                rayPos = groundHit.point;
+                preview.transform.position = rayPos;
+                preview.transform.rotation = new Quaternion(0, transform.rotation.y, 0, transform.rotation.w);
+            }
+            else
+            {
+                rayPos = new Vector3(0, -100, 0);
+            }
         }
     }
 }

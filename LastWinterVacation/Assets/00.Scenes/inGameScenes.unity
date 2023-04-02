@@ -15636,6 +15636,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   rayPos: {x: 0, y: 0, z: 0}
+  testOBJ: {fileID: 6011794616124275854, guid: 925fd27492efc3044ab56edbd59a05da, type: 3}
+  previewMaterial: {fileID: 2100000, guid: ec97fb3a5f99b5d42bf97f2a3c1604f3, type: 2}
 --- !u!222 &6615294731375241991
 CanvasRenderer:
   m_ObjectHideFlags: 0

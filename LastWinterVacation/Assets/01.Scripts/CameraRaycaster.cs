@@ -11,23 +11,25 @@ public class CameraRaycaster : MonoBehaviour
     public LayerMask isGround;
     private RaycastHit groundHit;
     public Vector3 rayPos;
-    private GameObject cube;
-    public BoxCollider targetColl;
+    public GameObject testOBJ;
+    [SerializeField]private Material previewMaterial;
+
     private void Awake()
     {
-        cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        targetColl = cube.GetComponent<BoxCollider>();
+        GetBlockInfo(testOBJ);
+    }
+    public void GetBlockInfo(GameObject readyPreview)
+    {
+        StartCoroutine(previewer(readyPreview));
+    }
+    IEnumerator previewer(GameObject preview)
+    {
+        GameObject previewTarget = Instantiate(preview);
+        previewTarget.GetComponent<MeshRenderer>().material = previewMaterial;
+        BoxCollider targetColl = previewTarget.GetComponent<BoxCollider>();
         targetColl.isTrigger = true;
-        GetBlockInfo(cube);
-    }
-    public void GetBlockInfo(GameObject preview)
-    {
-        MeshFilter filter = preview.GetComponent<MeshFilter>();
-        preview.GetComponent<MeshRenderer>().material = null;
-        StartCoroutine(previewer(preview,filter));
-    }
-    IEnumerator previewer(GameObject preview,MeshFilter filter)
-    {
+        float targetYSize = targetColl.bounds.size.y / 2f;
+        Debug.Log(targetColl.bounds.size);
         while (true)
         {
             yield return new WaitForEndOfFrame();
@@ -35,9 +37,9 @@ public class CameraRaycaster : MonoBehaviour
             if (Physics.Raycast(ray, out groundHit, 10, isGround))
             {
                 Debug.DrawRay(transform.position, transform.forward * 10, Color.red);
-                rayPos = groundHit.point;
-                preview.transform.position = rayPos;
-                preview.transform.rotation = new Quaternion(0, transform.rotation.y, 0, transform.rotation.w);
+                rayPos = new Vector3(groundHit.point.x, groundHit.point.y+targetYSize, groundHit.point.z);
+                previewTarget.transform.position = rayPos;
+                previewTarget.transform.rotation = new Quaternion(0, transform.rotation.y, 0, transform.rotation.w);
             }
             else
             {

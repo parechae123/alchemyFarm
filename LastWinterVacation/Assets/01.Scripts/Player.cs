@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject TargetUI;
     [SerializeField] private GameObject menuUI;
     [SerializeField] private GameObject dragUI;
+    private GameObject installBTNPanel;
     public Interaction NPCinterScript;
 
     [SerializeField] private float moveSpeed;
@@ -116,6 +117,7 @@ public class Player : MonoBehaviour
         Cursor.SetCursor(cursorIMG, mousePos, CursorMode.Auto);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        installBTNPanel = GameObject.Find("InstallPanel");
     }
     private void FixedUpdate()
     {
@@ -170,18 +172,24 @@ public class Player : MonoBehaviour
                 dragUI = hit.collider.gameObject;
                 if(dragUI.layer == 8)
                 {
-                    NPCinterScript.saveItems();
-                    dragUI.GetComponent<PlantButton>().TargetFarm = NPCinterScript;
-                    dragUI.GetComponent<PlantButton>().SeedInput = NPCinterScript.npcItems[0];
-                    dragUI.GetComponent<PlantButton>().TargetFarm = NPCinterScript;
-                    dragUI.GetComponent<PlantButton>().PlantButtonClick();
+                    if (dragUI.TryGetComponent<PlantButton>(out PlantButton PBT))
+                    {
+                        NPCinterScript.saveItems();
+                        dragUI.GetComponent<PlantButton>().TargetFarm = NPCinterScript;
+                        dragUI.GetComponent<PlantButton>().SeedInput = NPCinterScript.npcItems[0];
+                        dragUI.GetComponent<PlantButton>().TargetFarm = NPCinterScript;
+                        dragUI.GetComponent<PlantButton>().PlantButtonClick();
+                    }
+                    if(dragUI.TryGetComponent<CraftingBTN>(out CraftingBTN CBT))
+                    {
+                        
+                    }
                 }
             }
             else if (hit.collider == null)
             {
                 dragUI = null;
             }
-
         }
         if (ctx.canceled)
         {
@@ -211,7 +219,20 @@ public class Player : MonoBehaviour
     }
     public void OnMouseRightClick(InputAction.CallbackContext ctx)
     {
-        
+        if (ctx.started)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector3.forward, 100, uiTaget);
+            if (hit.collider != null&&hit.collider.gameObject.layer == 3&&hit.collider.gameObject.transform.parent.parent.name == "Inventory"&&hit.collider.GetComponent<InvenData>().inSlotItem.itemType == ItemTable.ItemTypeList.Furniture)
+            {
+                Debug.Log("인벤토리 플레이어");
+                installBTNPanel.transform.position = hit.collider.gameObject.transform.position;
+            }
+            
+            if (hit.collider == null)
+            {
+                installBTNPanel.transform.position = new Vector3(60,-680,0);
+            }
+        }
     }
     public void OnInteractionKey(InputAction.CallbackContext ctx)
     {

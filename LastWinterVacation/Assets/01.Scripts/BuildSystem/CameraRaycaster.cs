@@ -15,11 +15,6 @@ public class CameraRaycaster : MonoBehaviour
     public Vector3 rayPos;
     public GameObject testOBJ;
     [SerializeField]private Material previewMaterial;
-
-    private void Awake()
-    {
-        GetBlockInfo(testOBJ);
-    }
     public void GetBlockInfo(GameObject readyPreview)
     {
         StartCoroutine(previewer(readyPreview));

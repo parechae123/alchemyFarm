@@ -370,6 +370,12 @@ PrefabInstance:
       propertyPath: IM
       value: 
       objectReference: {fileID: 6615294731303021912}
+    - target: {fileID: 4380296131353660813, guid: 7c61ad40847908c48bc9945ba2c4c286,
+        type: 3}
+      propertyPath: what
+      value: 
+      objectReference: {fileID: 11400000, guid: fa31b9725cd224a46aa3fb7a33775aa9,
+        type: 2}
     - target: {fileID: 4380296131353660814, guid: 7c61ad40847908c48bc9945ba2c4c286,
         type: 3}
       propertyPath: m_RootOrder
@@ -1309,7 +1315,7 @@ GameObject:
   - component: {fileID: 983047484}
   - component: {fileID: 983047486}
   - component: {fileID: 983047485}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1751,7 +1757,8 @@ GameObject:
   - component: {fileID: 1145468610}
   - component: {fileID: 1145468609}
   - component: {fileID: 1145468612}
-  m_Layer: 5
+  - component: {fileID: 1145468613}
+  m_Layer: 8
   m_Name: InstallButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1885,8 +1892,22 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 80, y: 80}
   m_EdgeRadius: 0
+--- !u!114 &1145468613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145468607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68006ec33779c7944a8adbdeb0bcba08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cmrRaycaster: {fileID: 6615294731368789694}
+  isInstalling: 0
 --- !u!1001 &1154668846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2034,7 +2055,7 @@ GameObject:
   - component: {fileID: 1290873861}
   - component: {fileID: 1290873860}
   - component: {fileID: 1290873863}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: InstallPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}

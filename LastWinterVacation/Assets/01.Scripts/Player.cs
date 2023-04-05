@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject TargetUI;
     [SerializeField] private GameObject menuUI;
     [SerializeField] private GameObject dragUI;
+    private GameObject installObject;
     private GameObject installBTNPanel;
     public Interaction NPCinterScript;
 
@@ -166,6 +167,7 @@ public class Player : MonoBehaviour
         if (ctx.started)
         {
             mouseDragStart = mousePos;
+            
             RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector3.forward, 100, uiTaget);
             if (hit.collider != null)
             {
@@ -182,7 +184,12 @@ public class Player : MonoBehaviour
                     }
                     if(dragUI.TryGetComponent<CraftingBTN>(out CraftingBTN CBT))
                     {
-                        
+                        Debug.Log("버튼 인식");
+                    }
+                    if (dragUI.TryGetComponent<InstallBTN>(out InstallBTN ITN)&& !dragUI.GetComponent<InstallBTN>().isInstalling)
+                    {
+                        dragUI.GetComponent<InstallBTN>().OnInstallBTN(installObject);
+                        layerTemp.GetComponent<InvenData>().Amount -= 1;
                     }
                 }
             }
@@ -217,6 +224,7 @@ public class Player : MonoBehaviour
             }
         }
     }
+    private GameObject layerTemp;
     public void OnMouseRightClick(InputAction.CallbackContext ctx)
     {
         if (ctx.started)
@@ -224,13 +232,22 @@ public class Player : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector3.forward, 100, uiTaget);
             if (hit.collider != null&&hit.collider.gameObject.layer == 3&&hit.collider.gameObject.transform.parent.parent.name == "Inventory"&&hit.collider.GetComponent<InvenData>().inSlotItem.itemType == ItemTable.ItemTypeList.Furniture)
             {
-                Debug.Log("인벤토리 플레이어");
+                if(layerTemp != hit.collider.gameObject&& layerTemp != null)
+                {
+                    installBTNPanel.transform.position = new Vector3(60, -680, 0);
+                    layerTemp.layer = 3;
+                    Debug.Log("ㅇㅇ");
+                }
+                hit.collider.gameObject.layer = 3;
+                layerTemp = hit.collider.gameObject;
+                installObject = layerTemp.GetComponent<InvenData>().inSlotItem.model[0];
                 installBTNPanel.transform.position = hit.collider.gameObject.transform.position;
+                layerTemp.layer = 0;
             }
-            
             if (hit.collider == null)
             {
                 installBTNPanel.transform.position = new Vector3(60,-680,0);
+                layerTemp.layer = 3;
             }
         }
     }

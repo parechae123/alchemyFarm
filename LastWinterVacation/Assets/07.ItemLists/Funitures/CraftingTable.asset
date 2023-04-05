@@ -18,7 +18,7 @@ MonoBehaviour:
   Amount: 0
   ItemNumber: 11
   Model:
-  - {fileID: 0}
+  - {fileID: 2653839572126420523, guid: 61ada7a8878837048b7b880b3d9b3a0f, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

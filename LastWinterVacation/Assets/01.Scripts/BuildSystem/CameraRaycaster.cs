@@ -14,26 +14,27 @@ public class CameraRaycaster : MonoBehaviour
     private RaycastHit groundHit;
     public Vector3 rayPos;
     public GameObject testOBJ;
+    private InstallBTN installBTN;
+    public bool installingState;
     [SerializeField]private Material previewMaterial;
     public void GetBlockInfo(GameObject readyPreview)
     {
+        installingState = true;
         StartCoroutine(previewer(readyPreview));
     }
     IEnumerator previewer(GameObject preview)
     {
         GameObject previewTarget = Instantiate(preview);
         previewTarget.layer = 10;
+        Material originMT = previewTarget.GetComponent<MeshRenderer>().material;
         previewTarget.GetComponent<MeshRenderer>().material = previewMaterial;
         BoxCollider targetColl = previewTarget.GetComponent<BoxCollider>();
         targetColl.isTrigger = true;
-        Vector3 targetSize = targetColl.bounds.size/ 2f;
-        Debug.Log("ªÁ¿Ã¡Ó" + targetColl.bounds.size);
-        Debug.Log("∏∆Ω∫" + targetColl.bounds.max);
-        Debug.Log("πŒ" + targetColl.bounds.min);
-        Debug.Log("ºæ≈Õ" + targetColl.bounds.center);
-        Debug.Log("¿Õ≈Ÿ∆Æ" + targetColl.bounds.extents);
+        float centerPivotGap = targetColl.center.y - previewTarget.transform.position.y;
+        float targetSize = (targetColl.bounds.size.y/ 2)-centerPivotGap;
         Vector3 previewSum;
-        while (true)
+
+        while (installingState)
         {
             yield return new WaitForEndOfFrame();
             previewSum = new Vector3(0,targetColl.size.y+1,0);
@@ -41,7 +42,7 @@ public class CameraRaycaster : MonoBehaviour
             if (Physics.Raycast(ray, out groundHit, 10, isGround))
             {
                 Debug.DrawRay(transform.position, transform.forward * 10, Color.red);
-                rayPos = new Vector3(groundHit.point.x, groundHit.point.y+targetSize.y, groundHit.point.z);
+                rayPos = new Vector3(groundHit.point.x, groundHit.point.y+targetSize, groundHit.point.z);
                 previewTarget.transform.position = rayPos;
                 previewTarget.transform.rotation = new Quaternion(0, transform.rotation.y, 0, transform.rotation.w);
                 if (Physics.BoxCast(previewTarget.transform.position - previewSum, targetColl.bounds.extents, Vector3.up, previewTarget.transform.rotation, targetColl.bounds.size.x, objectInstallable))
@@ -58,5 +59,8 @@ public class CameraRaycaster : MonoBehaviour
                 rayPos = new Vector3(0, -100, 0);
             }
         }
+        previewTarget.layer = 0;
+        targetColl.isTrigger = false;
+        previewTarget.GetComponent<MeshRenderer>().material = originMT;
     }
 }

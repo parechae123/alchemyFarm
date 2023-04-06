@@ -16,4 +16,9 @@ public class InstallBTN : MonoBehaviour
             isInstalling = true;
         }
     }
+    public void InstallOBJ()
+    {
+        isInstalling=false;
+        cmrRaycaster.installingState = false;
+    }
 }

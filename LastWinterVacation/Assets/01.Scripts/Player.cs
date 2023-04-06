@@ -195,6 +195,10 @@ public class Player : MonoBehaviour
             else if (hit.collider == null)
             {
                 dragUI = null;
+                if (installBTNPanel.transform.GetChild(0).GetComponent<InstallBTN>().isInstalling)
+                {
+                    installBTNPanel.transform.GetChild(0).GetComponent<InstallBTN>().InstallOBJ();
+                }
             }
         }
         if (ctx.canceled)

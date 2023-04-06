@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject menuUI;
     [SerializeField] private GameObject dragUI;
     private GameObject installObject;
-    private GameObject installBTNPanel;
+    [SerializeField] private GameObject installBTNPanel;
     public Interaction NPCinterScript;
 
     [SerializeField] private float moveSpeed;
@@ -118,7 +118,6 @@ public class Player : MonoBehaviour
         Cursor.SetCursor(cursorIMG, mousePos, CursorMode.Auto);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        installBTNPanel = GameObject.Find("InstallPanel");
     }
     private void FixedUpdate()
     {

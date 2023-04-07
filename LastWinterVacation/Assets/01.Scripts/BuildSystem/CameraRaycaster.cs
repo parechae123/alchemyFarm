@@ -16,6 +16,7 @@ public class CameraRaycaster : MonoBehaviour
     public GameObject testOBJ;
     private InstallBTN installBTN;
     public bool installingState;
+    public bool previewCollided;
     [SerializeField]private Material previewMaterial;
     public void GetBlockInfo(GameObject readyPreview)
     {
@@ -33,10 +34,11 @@ public class CameraRaycaster : MonoBehaviour
         float centerPivotGap = targetColl.center.y - previewTarget.transform.position.y;
         float targetSize = (targetColl.bounds.size.y/ 2)-centerPivotGap;
         Vector3 previewSum;
+        WaitForEndOfFrame wf = new WaitForEndOfFrame();
 
         while (installingState)
         {
-            yield return new WaitForEndOfFrame();
+            yield return wf;
             previewSum = new Vector3(0,targetColl.size.y+1,0);
             Ray ray = new Ray(transform.position, transform.forward * 10);
             if (Physics.Raycast(ray, out groundHit, 10, isGround))
@@ -47,10 +49,12 @@ public class CameraRaycaster : MonoBehaviour
                 previewTarget.transform.rotation = new Quaternion(0, transform.rotation.y, 0, transform.rotation.w);
                 if (Physics.BoxCast(previewTarget.transform.position - previewSum, targetColl.bounds.extents, Vector3.up, previewTarget.transform.rotation, targetColl.bounds.size.x, objectInstallable))
                 {
+                    previewCollided = true;
                     previewMaterial.color = Color.red;
                 }
                 else
                 {
+                    previewCollided = false;
                     previewMaterial.color = Color.green;
                 }
             }

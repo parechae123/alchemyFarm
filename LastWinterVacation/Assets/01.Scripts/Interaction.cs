@@ -12,7 +12,8 @@ public class Interaction : MonoBehaviour
         Miner,
         Alchemist,
         GeneralStore,
-        Farm
+        Farm,
+        Funitures
     }
     public NPCType npctype;
 
@@ -23,6 +24,14 @@ public class Interaction : MonoBehaviour
     [SerializeField] private byte[] ItemAmount;
     public ItemTable[] npcItems;
     [SerializeField] private GameObject Player;
+    private void Awake()
+    {
+        Player = GameObject.Find("Player");
+        if(npctype == NPCType.Funitures)
+        {
+            Debug.Log("이프문 작동");
+        }
+    }
     public void UIset()
     {
 /*        if(npctype != NPCType.Farm)
@@ -66,6 +75,12 @@ public class Interaction : MonoBehaviour
                     UI.transform.GetChild(i + 1).GetChild(0).GetComponent<InvenData>().Amount = ItemAmount[i];
                 }
             break;
+            case NPCType.Funitures:
+                for (byte i = 0; i < npcItems.Length; i++)
+                {
+                    UI.transform.GetChild(i).GetChild(0).GetComponent<Buy>().SellItem = npcItems[i];
+                }
+                break;
         }
     }
     public void saveItems()

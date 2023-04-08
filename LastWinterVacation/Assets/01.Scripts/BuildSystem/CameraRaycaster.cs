@@ -63,7 +63,7 @@ public class CameraRaycaster : MonoBehaviour
                 rayPos = new Vector3(0, -100, 0);
             }
         }
-        previewTarget.layer = 0;
+        previewTarget.layer = 6;
         targetColl.isTrigger = false;
         previewTarget.GetComponent<MeshRenderer>().material = originMT;
     }

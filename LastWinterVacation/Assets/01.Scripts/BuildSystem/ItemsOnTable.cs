@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class ItemsOnTable : MonoBehaviour
 {
-    public InvenData[] onTableObjects = new InvenData[3];//최대 3개
-    public GameObject[] itemObject = new GameObject[3];
-    public void OnTableSetting()
+    private InvenData[] onTableObjects = new InvenData[3];//최대 3개
+    public InvenData[] OnTableObjects
     {
-        for(byte i = 0; onTableObjects.Length > i; i++)
+        get { return onTableObjects; }
+        set 
+        { 
+            onTableObjects = value;
+            OnTableSetting(OnTableObjects);
+        }
+    }//최대 3개
+    public GameObject[] itemObject = new GameObject[3];
+    public void OnTableSetting(InvenData[] inven)
+    {
+        for(byte i = 0; OnTableObjects.Length > i; i++)
         {
-           itemObject[i] = onTableObjects[i].inSlotItem.model[0];
+           itemObject[i] = OnTableObjects[i].inSlotItem.model[0];
         }
     }
 }

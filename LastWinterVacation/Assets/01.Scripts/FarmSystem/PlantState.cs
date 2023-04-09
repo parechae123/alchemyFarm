@@ -35,8 +35,14 @@ public class PlantState : MonoBehaviour
                 GetComponent<MeshRenderer>().materials = mt;
                 mf.mesh = seedInfo.model[plantLV].GetComponent<MeshFilter>().sharedMesh;
             }
+            if (plantLV == 3)
+            {
+                mf.mesh = null;
+                transform.parent.parent.GetComponent<Interaction>().npcItems[2] = transform.parent.parent.GetComponent<Interaction>().npcItems[1].Adult;
+                transform.parent.parent.GetComponent<Interaction>().ItemAmount[2] += 1;
+                transform.parent.parent.GetComponent<Interaction>().ItemAmount[1] -= 1;
+            }
             yield return new WaitForSeconds(20);
         }
-
     }
 }

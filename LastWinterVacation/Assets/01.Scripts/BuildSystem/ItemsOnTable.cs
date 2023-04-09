@@ -4,22 +4,23 @@ using UnityEngine;
 
 public class ItemsOnTable : MonoBehaviour
 {
-    [SerializeField]private ItemTable[] onTableObjects = new ItemTable[3];//최대 3개
-    public ItemTable[] OnTableObjects
-    {
-        get { return onTableObjects; }
-        set 
-        { 
-            onTableObjects = value;
-            OnTableSetting(OnTableObjects);
-        }
-    }//최대 3개
+    public ItemTable[] onTableObjects = new ItemTable[3];//최대 3개
+
     public GameObject[] itemObject = new GameObject[3];
-    public void OnTableSetting(ItemTable[] inven)
+    public void OnTableSetting()
     {
-        for(byte i = 0; OnTableObjects.Length > i; i++)
+        for(byte i = 0; onTableObjects.Length > i; i++)
         {
-           itemObject[i] = OnTableObjects[i].model[0];
+            if(onTableObjects[i].itemType == ItemTable.ItemTypeList.TableObjects&& onTableObjects[i].model != null)
+            {
+                itemObject[i].GetComponent<MeshFilter>().mesh = onTableObjects[i].model[0].GetComponent<MeshFilter>().sharedMesh;
+                itemObject[i].GetComponent<MeshRenderer>().materials = onTableObjects[i].model[0].GetComponent<MeshRenderer>().sharedMaterials;
+            }
+            if (onTableObjects[i].itemType != ItemTable.ItemTypeList.TableObjects)
+            {
+                itemObject[i].GetComponent<MeshFilter>().mesh = null;
+/*                itemObject[i].GetComponent<MeshRenderer>().materials = ;*/
+            }
         }
     }
 }

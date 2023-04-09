@@ -34,13 +34,27 @@ public class Buy : MonoBehaviour
             if (ray.collider.GetComponent<InvenData>().inSlotItem == SellItem && ray.collider.GetComponent<InvenData>().Amount <= 245)
             {
                 ray.collider.GetComponent<InvenData>().Buy(SellItem);
-                ray.collider.GetComponent<InvenData>().Amount += 10;
+                if(SellItem.itemType== ItemTable.ItemTypeList.Seed)
+                {
+                    ray.collider.GetComponent<InvenData>().Amount += 10;
+                }
+                else
+                {
+                    ray.collider.GetComponent<InvenData>().Amount += 1;
+                }
                 rt.localPosition = Vector2.zero;
                 Debug.Log("구매1");
             }
             else
             {
-                IM.getItem(SellItem,10);
+                if (SellItem.itemType == ItemTable.ItemTypeList.Seed)
+                {
+                    IM.getItem(SellItem, 10);
+                }
+                else
+                {
+                    IM.getItem(SellItem, 1);
+                }
                 ray.collider.GetComponent<InvenData>().Buy(SellItem);
                 rt.localPosition = Vector2.zero;
                 Debug.Log("구매");

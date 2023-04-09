@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0accd005eb0ce14e9de767018db6ee1, type: 3}
-  m_Name: CraftingTable
+  m_Name: Potato
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300000, guid: a11aeeb7a2ffff44f82c5ead273ccf48, type: 3}
-  ItemName: CraftingTable
-  ItemType: 4
+  Icon: {fileID: 21300000, guid: be340a165cb9c8d4cb50f1deeb51d4ea, type: 3}
+  ItemName: Potato
+  ItemType: 7
   Amount: 0
-  ItemNumber: 11
+  ItemNumber: 31
   Model:
-  - {fileID: 2653839572126420523, guid: 61ada7a8878837048b7b880b3d9b3a0f, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  ItemValue: 1500
+  - {fileID: 0}
+  ItemValue: 30
+  adult: {fileID: 0}

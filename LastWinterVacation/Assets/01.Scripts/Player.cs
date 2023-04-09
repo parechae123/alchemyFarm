@@ -189,6 +189,10 @@ public class Player : MonoBehaviour
                     {
                         dragUI.GetComponent<InstallBTN>().OnInstallBTN(installObject);
                         layerTemp.GetComponent<InvenData>().Amount -= 1;
+                        if(layerTemp.GetComponent<InvenData>().Amount == 0)
+                        {
+                            installBTNPanel.transform.position = new Vector3(60, -680, 0);
+                        }
                     }
                 }
             }
@@ -247,7 +251,7 @@ public class Player : MonoBehaviour
                 installBTNPanel.transform.position = hit.collider.gameObject.transform.position;
                 layerTemp.layer = 0;
             }
-            if (hit.collider == null)
+            if (hit.collider == null && layerTemp !=null)
             {
                 installBTNPanel.transform.position = new Vector3(60,-680,0);
                 layerTemp.layer = 3;

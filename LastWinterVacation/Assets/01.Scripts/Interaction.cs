@@ -21,7 +21,7 @@ public class Interaction : MonoBehaviour
     public bool plantingActive = false;
     public GameObject UI;
     [SerializeField] private bool[] isSlotEmpty;
-    [SerializeField] private byte[] ItemAmount;
+    public byte[] ItemAmount;
     public ItemTable[] npcItems;
     [SerializeField] private GameObject Player;
     private void Awake()
@@ -93,7 +93,8 @@ public class Interaction : MonoBehaviour
             ItemAmount[i] = UI.transform.GetChild(i + 1).GetChild(0).GetComponent<InvenData>().Amount;
             if(TryGetComponent<ItemsOnTable>(out ItemsOnTable IOT))
             {
-                IOT.OnTableObjects[i] = npcItems[i];
+                IOT.onTableObjects[i] = npcItems[i];
+                IOT.OnTableSetting();
             }
         }
     }

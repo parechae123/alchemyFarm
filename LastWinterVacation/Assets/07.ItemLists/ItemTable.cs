@@ -14,7 +14,7 @@ public class ItemTable : ScriptableObject
     private string ItemName;
     public string itemName { get { return ItemName; } }
     //Enum 
-    public enum ItemTypeList {Empty,Seed,EquipMents,Alchmies, Furniture,HomeBluePrints }
+    public enum ItemTypeList {Empty,Seed,EquipMents,Alchmies, Furniture,HomeBluePrints,TableObjects,Adult }
     [SerializeField]
     private ItemTypeList ItemType;
     public ItemTypeList itemType { get { return ItemType; } }
@@ -33,4 +33,7 @@ public class ItemTable : ScriptableObject
     [SerializeField]
     private int ItemValue;
     public int itemValue { get { return ItemValue; } }
+    [SerializeField]
+    private ItemTable adult;
+    public ItemTable Adult { get { return adult; } }
 }

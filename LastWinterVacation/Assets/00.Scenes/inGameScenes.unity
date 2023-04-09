@@ -1052,8 +1052,8 @@ MonoBehaviour:
   isSlotEmpty: 00000000
   ItemAmount: 
   npcItems:
-  - {fileID: 11400000, guid: aff97fb0d1e5aaf43801b3482531021d, type: 2}
-  - {fileID: 11400000, guid: 9c12e4d04fa8384488cd9ca4fe9fc211, type: 2}
+  - {fileID: 11400000, guid: 78edf27c24877d748bc6bc0bb9d8b401, type: 2}
+  - {fileID: 11400000, guid: fa31b9725cd224a46aa3fb7a33775aa9, type: 2}
   - {fileID: 11400000, guid: 9c12e4d04fa8384488cd9ca4fe9fc211, type: 2}
   - {fileID: 11400000, guid: 9c12e4d04fa8384488cd9ca4fe9fc211, type: 2}
   Player: {fileID: 8191247598674401356}
@@ -2424,7 +2424,7 @@ Transform:
   m_GameObject: {fileID: 1133709015}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
   m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

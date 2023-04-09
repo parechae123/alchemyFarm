@@ -100,7 +100,7 @@ public class Player : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Locked;
                 if (NPCinterScript != null)
                 {
-                    if (NPCinterScript.npctype == Interaction.NPCType.Farm)
+                    if (NPCinterScript.npctype == Interaction.NPCType.Farm || NPCinterScript.npctype == Interaction.NPCType.Funitures)
                     {
                         NPCinterScript.saveItems();
                     }
@@ -343,7 +343,7 @@ public class Player : MonoBehaviour
             TargetUI = null;
             if (NPCinterScript != null)
             {
-                if (NPCinterScript.npctype == Interaction.NPCType.Farm)
+                if (NPCinterScript.npctype == Interaction.NPCType.Farm || NPCinterScript.npctype == Interaction.NPCType.Funitures)
                 {
                     NPCinterScript.saveItems();
                 }

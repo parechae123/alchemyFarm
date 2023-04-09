@@ -30,6 +30,7 @@ public class Interaction : MonoBehaviour
         if(npctype == NPCType.Funitures)
         {
             Debug.Log("이프문 작동");
+            UI = GameObject.Find("Panel").transform.Find("CraftingTableUI").gameObject;
         }
     }
     public void UIset()
@@ -78,7 +79,8 @@ public class Interaction : MonoBehaviour
             case NPCType.Funitures:
                 for (byte i = 0; i < npcItems.Length; i++)
                 {
-                    UI.transform.GetChild(i).GetChild(0).GetComponent<Buy>().SellItem = npcItems[i];
+                    UI.transform.GetChild(i + 1).GetChild(0).GetComponent<InvenData>().inSlotItem = npcItems[i];
+                    UI.transform.GetChild(i + 1).GetChild(0).GetComponent<InvenData>().Amount = ItemAmount[i];
                 }
                 break;
         }
@@ -89,6 +91,10 @@ public class Interaction : MonoBehaviour
         {
             npcItems[i] = UI.transform.GetChild(i + 1).GetChild(0).GetComponent<InvenData>().inSlotItem;
             ItemAmount[i] = UI.transform.GetChild(i + 1).GetChild(0).GetComponent<InvenData>().Amount;
+            if(TryGetComponent<ItemsOnTable>(out ItemsOnTable IOT))
+            {
+                IOT.OnTableObjects[i] = npcItems[i];
+            }
         }
     }
     public void ToPlantingBT(bool alreadyPlanting)

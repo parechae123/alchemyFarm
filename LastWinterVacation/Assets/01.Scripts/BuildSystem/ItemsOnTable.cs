@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ItemsOnTable : MonoBehaviour
 {
-    private InvenData[] onTableObjects = new InvenData[3];//최대 3개
-    public InvenData[] OnTableObjects
+    [SerializeField]private ItemTable[] onTableObjects = new ItemTable[3];//최대 3개
+    public ItemTable[] OnTableObjects
     {
         get { return onTableObjects; }
         set 
@@ -15,11 +15,11 @@ public class ItemsOnTable : MonoBehaviour
         }
     }//최대 3개
     public GameObject[] itemObject = new GameObject[3];
-    public void OnTableSetting(InvenData[] inven)
+    public void OnTableSetting(ItemTable[] inven)
     {
         for(byte i = 0; OnTableObjects.Length > i; i++)
         {
-           itemObject[i] = OnTableObjects[i].inSlotItem.model[0];
+           itemObject[i] = OnTableObjects[i].model[0];
         }
     }
 }

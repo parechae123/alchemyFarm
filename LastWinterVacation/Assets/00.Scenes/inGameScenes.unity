@@ -753,7 +753,7 @@ GameObject:
   - component: {fileID: 305049391}
   - component: {fileID: 305049393}
   - component: {fileID: 305049392}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -853,85 +853,6 @@ Transform:
   m_Father: {fileID: 146084562}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &358121383
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2653839572126420523, guid: 61ada7a8878837048b7b880b3d9b3a0f,
-        type: 3}
-      propertyPath: m_Name
-      value: CraftingTable
-      objectReference: {fileID: 0}
-    - target: {fileID: 2653839572126913035, guid: 61ada7a8878837048b7b880b3d9b3a0f,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2653839572126913035, guid: 61ada7a8878837048b7b880b3d9b3a0f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2653839572126913035, guid: 61ada7a8878837048b7b880b3d9b3a0f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2653839572126913035, guid: 61ada7a8878837048b7b880b3d9b3a0f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2653839572126913035, guid: 61ada7a8878837048b7b880b3d9b3a0f,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2653839572126913035, guid: 61ada7a8878837048b7b880b3d9b3a0f,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2653839572126913035, guid: 61ada7a8878837048b7b880b3d9b3a0f,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2653839572126913035, guid: 61ada7a8878837048b7b880b3d9b3a0f,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2653839572126913035, guid: 61ada7a8878837048b7b880b3d9b3a0f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2653839572126913035, guid: 61ada7a8878837048b7b880b3d9b3a0f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2653839572126913035, guid: 61ada7a8878837048b7b880b3d9b3a0f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4993206552832564127, guid: 61ada7a8878837048b7b880b3d9b3a0f,
-        type: 3}
-      propertyPath: UI
-      value: 
-      objectReference: {fileID: 1072895750}
-    - target: {fileID: 4993206552832564127, guid: 61ada7a8878837048b7b880b3d9b3a0f,
-        type: 3}
-      propertyPath: Player
-      value: 
-      objectReference: {fileID: 8191247598674401356}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 61ada7a8878837048b7b880b3d9b3a0f, type: 3}
 --- !u!1 &372442662
 GameObject:
   m_ObjectHideFlags: 0
@@ -1741,7 +1662,7 @@ GameObject:
   - component: {fileID: 882485157}
   - component: {fileID: 882485156}
   - component: {fileID: 882485155}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2808,7 +2729,7 @@ GameObject:
   - component: {fileID: 1219983762}
   - component: {fileID: 1219983761}
   - component: {fileID: 1219983759}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: InvenData
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2828,7 +2749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryManager: {fileID: 1072895752}
-  invenNumber: 1
+  invenNumber: 0
   inSlotItem: {fileID: 11400000, guid: 9c12e4d04fa8384488cd9ca4fe9fc211, type: 2}
   emptyItem: {fileID: 11400000, guid: 9c12e4d04fa8384488cd9ca4fe9fc211, type: 2}
   amountText: {fileID: 882485155}
@@ -4189,7 +4110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryManager: {fileID: 1072895752}
-  invenNumber: 0
+  invenNumber: 1
   inSlotItem: {fileID: 11400000, guid: 9c12e4d04fa8384488cd9ca4fe9fc211, type: 2}
   emptyItem: {fileID: 11400000, guid: 9c12e4d04fa8384488cd9ca4fe9fc211, type: 2}
   amountText: {fileID: 865766297}

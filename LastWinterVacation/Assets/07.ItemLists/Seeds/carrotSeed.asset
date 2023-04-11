@@ -24,3 +24,4 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 1301151405176600, guid: 56aff3ec1fc023d43855db67754849a1, type: 3}
   ItemValue: 10
+  adult: {fileID: 11400000, guid: b334787a4d593e14f8c9728c4945722d, type: 2}

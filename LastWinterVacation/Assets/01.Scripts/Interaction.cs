@@ -32,6 +32,12 @@ public class Interaction : MonoBehaviour
             Debug.Log("이프문 작동");
             UI = GameObject.Find("Panel").transform.Find("CraftingTableUI").gameObject;
         }
+        if (npctype == NPCType.Farm)
+        {
+            Debug.Log("이프문 작동");
+            UI = GameObject.Find("Panel").transform.Find("FarmUI").gameObject;
+        }
+
     }
     public void UIset()
     {

@@ -84,6 +84,13 @@ public class InvenData : MonoBehaviour
     }
     public void Buy(ItemTable whatBuy)
     {
-        wallet.Gold -= whatBuy.itemValue * 15;
+        if(whatBuy.itemType == ItemTable.ItemTypeList.Seed)
+        {
+            wallet.Gold -= whatBuy.itemValue * 15;
+        }
+        if (whatBuy.itemType != ItemTable.ItemTypeList.Seed)
+        {
+            wallet.Gold -= whatBuy.itemValue;
+        }
     }
 }

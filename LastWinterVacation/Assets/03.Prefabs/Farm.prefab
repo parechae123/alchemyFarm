@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8350986390775749136}
   - component: {fileID: 8350986390775749133}
   - component: {fileID: 8350986390775749134}
-  - component: {fileID: 8350986390775749135}
   - component: {fileID: 8350986390775749132}
   m_Layer: 0
   m_Name: Plants
@@ -86,19 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8350986390775749135
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8350986390775749137}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8350986390775749132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +114,6 @@ GameObject:
   - component: {fileID: 8350986390817229151}
   - component: {fileID: 8350986390817229148}
   - component: {fileID: 8350986390817229149}
-  - component: {fileID: 8350986390817229150}
   - component: {fileID: 8350986390817229147}
   m_Layer: 0
   m_Name: Plants
@@ -203,19 +188,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8350986390817229150
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8350986390817228960}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8350986390817229147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,7 +217,6 @@ GameObject:
   - component: {fileID: 8350986390844331149}
   - component: {fileID: 8350986390844331146}
   - component: {fileID: 8350986390844331147}
-  - component: {fileID: 8350986390844331148}
   - component: {fileID: 8350986390844331145}
   m_Layer: 0
   m_Name: Plants
@@ -320,19 +291,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8350986390844331148
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8350986390844331150}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8350986390844331145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,7 +320,6 @@ GameObject:
   - component: {fileID: 8350986390870130626}
   - component: {fileID: 8350986390870130687}
   - component: {fileID: 8350986390870130624}
-  - component: {fileID: 8350986390870130625}
   - component: {fileID: 8350986390870130686}
   m_Layer: 0
   m_Name: Plants
@@ -437,19 +394,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8350986390870130625
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8350986390870130627}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8350986390870130686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -564,7 +508,6 @@ GameObject:
   - component: {fileID: 8350986391054501723}
   - component: {fileID: 8350986391054501720}
   - component: {fileID: 8350986391054501721}
-  - component: {fileID: 8350986391054501722}
   - component: {fileID: 8350986391054501719}
   m_Layer: 0
   m_Name: Plants
@@ -639,19 +582,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8350986391054501722
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8350986391054501724}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8350986391054501719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -681,7 +611,6 @@ GameObject:
   - component: {fileID: 8350986391095120424}
   - component: {fileID: 8350986391095120421}
   - component: {fileID: 8350986391095120422}
-  - component: {fileID: 8350986391095120423}
   - component: {fileID: 8350986391095120420}
   m_Layer: 0
   m_Name: Plants
@@ -756,19 +685,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8350986391095120423
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8350986391095120425}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8350986391095120420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -798,7 +714,6 @@ GameObject:
   - component: {fileID: 8350986391312038808}
   - component: {fileID: 8350986391312038805}
   - component: {fileID: 8350986391312038806}
-  - component: {fileID: 8350986391312038807}
   - component: {fileID: 8350986391312038804}
   m_Layer: 0
   m_Name: Plants
@@ -873,19 +788,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8350986391312038807
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8350986391312038809}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8350986391312038804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -915,7 +817,6 @@ GameObject:
   - component: {fileID: 8350986391577252660}
   - component: {fileID: 8350986391577252657}
   - component: {fileID: 8350986391577252658}
-  - component: {fileID: 8350986391577252659}
   - component: {fileID: 8350986391577252656}
   m_Layer: 0
   m_Name: Plants
@@ -990,19 +891,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8350986391577252659
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8350986391577252661}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8350986391577252656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1032,7 +920,6 @@ GameObject:
   - component: {fileID: 8350986391619699563}
   - component: {fileID: 8350986391619699560}
   - component: {fileID: 8350986391619699561}
-  - component: {fileID: 8350986391619699562}
   - component: {fileID: 8350986391619699559}
   m_Layer: 0
   m_Name: Plants
@@ -1107,19 +994,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8350986391619699562
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8350986391619699564}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8350986391619699559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1149,7 +1023,6 @@ GameObject:
   - component: {fileID: 8350986391811040466}
   - component: {fileID: 8350986391811040463}
   - component: {fileID: 8350986391811040464}
-  - component: {fileID: 8350986391811040465}
   - component: {fileID: 8350986391811040462}
   m_Layer: 0
   m_Name: Plants
@@ -1224,19 +1097,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8350986391811040465
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8350986391811040467}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8350986391811040462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1266,7 +1126,6 @@ GameObject:
   - component: {fileID: 8350986391887191561}
   - component: {fileID: 8350986391887191558}
   - component: {fileID: 8350986391887191559}
-  - component: {fileID: 8350986391887191560}
   - component: {fileID: 8350986391887191557}
   m_Layer: 0
   m_Name: Plants
@@ -1341,19 +1200,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8350986391887191560
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8350986391887191562}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8350986391887191557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1383,7 +1229,6 @@ GameObject:
   - component: {fileID: 8350986392041255047}
   - component: {fileID: 8350986392041255044}
   - component: {fileID: 8350986392041255045}
-  - component: {fileID: 8350986392041255046}
   - component: {fileID: 8350986392041255043}
   m_Layer: 0
   m_Name: Plants
@@ -1458,19 +1303,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8350986392041255046
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8350986392041255048}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8350986392041255043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1500,7 +1332,6 @@ GameObject:
   - component: {fileID: 8350986392045081370}
   - component: {fileID: 8350986392045081367}
   - component: {fileID: 8350986392045081368}
-  - component: {fileID: 8350986392045081369}
   - component: {fileID: 8350986392045081366}
   m_Layer: 0
   m_Name: Plants
@@ -1575,19 +1406,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8350986392045081369
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8350986392045081371}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8350986392045081366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1617,7 +1435,6 @@ GameObject:
   - component: {fileID: 8350986392105786695}
   - component: {fileID: 8350986392105786692}
   - component: {fileID: 8350986392105786693}
-  - component: {fileID: 8350986392105786694}
   - component: {fileID: 8350986392105786691}
   m_Layer: 0
   m_Name: Plants
@@ -1692,19 +1509,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8350986392105786694
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8350986392105786696}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8350986392105786691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1734,7 +1538,6 @@ GameObject:
   - component: {fileID: 8350986392209417097}
   - component: {fileID: 8350986392209417094}
   - component: {fileID: 8350986392209417095}
-  - component: {fileID: 8350986392209417096}
   - component: {fileID: 8350986392209417093}
   m_Layer: 0
   m_Name: Plants
@@ -1809,19 +1612,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8350986392209417096
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8350986392209417098}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8350986392209417093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1851,7 +1641,6 @@ GameObject:
   - component: {fileID: 8350986392501832789}
   - component: {fileID: 8350986392501832786}
   - component: {fileID: 8350986392501832787}
-  - component: {fileID: 8350986392501832788}
   - component: {fileID: 8350986392501832785}
   m_Layer: 0
   m_Name: Plants
@@ -1926,19 +1715,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8350986392501832788
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8350986392501832790}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8350986392501832785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1968,7 +1744,6 @@ GameObject:
   - component: {fileID: 8350986392566749208}
   - component: {fileID: 8350986392566749205}
   - component: {fileID: 8350986392566749206}
-  - component: {fileID: 8350986392566749207}
   - component: {fileID: 8350986392566749204}
   m_Layer: 0
   m_Name: Plants
@@ -2043,19 +1818,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8350986392566749207
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8350986392566749209}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8350986392566749204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2085,7 +1847,6 @@ GameObject:
   - component: {fileID: 8350986392645900079}
   - component: {fileID: 8350986392645900076}
   - component: {fileID: 8350986392645900077}
-  - component: {fileID: 8350986392645900078}
   - component: {fileID: 8350986392645900075}
   m_Layer: 0
   m_Name: Plants
@@ -2160,19 +1921,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8350986392645900078
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8350986392645900080}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8350986392645900075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2202,7 +1950,6 @@ GameObject:
   - component: {fileID: 8350986392756077894}
   - component: {fileID: 8350986392756077891}
   - component: {fileID: 8350986392756077892}
-  - component: {fileID: 8350986392756077893}
   - component: {fileID: 8350986392756077890}
   m_Layer: 0
   m_Name: Plants
@@ -2277,19 +2024,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8350986392756077893
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8350986392756077895}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8350986392756077890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2319,7 +2053,6 @@ GameObject:
   - component: {fileID: 8350986392773600355}
   - component: {fileID: 8350986392773600352}
   - component: {fileID: 8350986392773600353}
-  - component: {fileID: 8350986392773600354}
   - component: {fileID: 8350986392773600287}
   m_Layer: 0
   m_Name: Plants
@@ -2394,19 +2127,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8350986392773600354
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8350986392773600356}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8350986392773600287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2436,7 +2156,6 @@ GameObject:
   - component: {fileID: 8350986392838567149}
   - component: {fileID: 8350986392838567144}
   - component: {fileID: 8350986392838567145}
-  - component: {fileID: 8350986392838567146}
   - component: {fileID: 8350986392838567147}
   - component: {fileID: 8350986392838567148}
   m_Layer: 6
@@ -2512,20 +2231,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8350986392838567146
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8350986392838567150}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43204642838645992, guid: 2ca00a7e0c04965408f4b472f11a9a7b, type: 2}
 --- !u!65 &8350986392838567147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2534,7 +2239,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8350986392838567150}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 5, y: 2.53, z: 5}

@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0accd005eb0ce14e9de767018db6ee1, type: 3}
-  m_Name: Potato
+  m_Name: Farm
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300000, guid: 60492a32d6314ac4ea437653c1c9e29b, type: 3}
-  ItemName: Potato
-  ItemType: 7
+  Icon: {fileID: 21300000, guid: d5f76e29d0bd6c64d9370fa3150e4d37, type: 3}
+  ItemName: Farm
+  ItemType: 4
   Amount: 0
-  ItemNumber: 31
+  ItemNumber: 13
   Model:
+  - {fileID: 8350986392838567150, guid: 184b895f28c75ba43bc839d0e03f3c0e, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  ItemValue: 30
+  ItemValue: 100
   adult: {fileID: 0}

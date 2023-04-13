@@ -183,7 +183,8 @@ public class Player : MonoBehaviour
                     }
                     if(dragUI.TryGetComponent<CraftingBTN>(out CraftingBTN CBT))
                     {
-                        Debug.Log("버튼 인식");
+                        Debug.Log("크래프팅");
+                        CBT.Crafting();
                     }
                     if (dragUI.TryGetComponent<InstallBTN>(out InstallBTN ITN)&& !dragUI.GetComponent<InstallBTN>().isInstalling)
                     {

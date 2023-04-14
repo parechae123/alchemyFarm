@@ -195,6 +195,10 @@ public class Player : MonoBehaviour
                             installBTNPanel.transform.position = new Vector3(60, -680, 0);
                         }
                     }
+                    if (dragUI.TryGetComponent<ExitBTN>(out ExitBTN ETN))
+                    {
+                        ETN.ExitFunction();
+                    }
                 }
             }
             else if (hit.collider == null)

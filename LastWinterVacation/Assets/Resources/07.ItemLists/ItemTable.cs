@@ -1,6 +1,7 @@
 using Microsoft.Unity.VisualStudio.Editor;
 using System.Collections;
 using System.Collections.Generic;
+using Unity;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Items", menuName = "Scriptable Object/Item Lists", order = int.MaxValue)]

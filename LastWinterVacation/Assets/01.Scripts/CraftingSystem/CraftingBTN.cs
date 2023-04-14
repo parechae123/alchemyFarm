@@ -19,13 +19,29 @@ public class CraftingBTN : MonoBehaviour
     }
     private void CraftOutput()
     {
-        if(itemType[0].itemNumber == 32 && amounts[0]>0)
+        if(itemType[0].itemNumber == 32 && amounts[0]>0&& itemType[1].itemNumber == 32 && amounts[1] > 0 && itemType[2].itemNumber == 32 && amounts[2] > 0)
         {
-            if (whatSlot[3].inSlotItem.itemNumber == 0 || whatSlot[3].inSlotItem.itemNumber ==32/*아이템 번호*/)
+            if (whatSlot[3].inSlotItem.itemNumber == 0 || whatSlot[3].inSlotItem.itemNumber ==40/*아이템 번호*/)
             {
-                whatSlot[0].Amount -= 1;
-                amounts[0] -= 1;
-                whatSlot[3].inSlotItem = Resources.Load<ItemTable>("07.ItemLists/Adults/Carrot");//대입할 아이템 테이블 주소(resource폴더 안에 있어야함,확장자 이름은 지워야함
+                for(byte i =0; i < 3;i++)
+                {
+                    whatSlot[i].Amount -= 1;
+                    amounts[i] -= 1;
+                }
+                whatSlot[3].inSlotItem = Resources.Load<ItemTable>("07.ItemLists/Juices/CarrotJuice");//대입할 아이템 테이블 주소(resource폴더 안에 있어야함,확장자 이름은 지워야함
+                whatSlot[3].Amount += 1;
+            }
+        }
+        if (itemType[0].itemNumber == 31 && amounts[0] > 0 && itemType[1].itemNumber == 31 && amounts[1] > 0 && itemType[2].itemNumber == 31 && amounts[2] > 0)
+        {
+            if (whatSlot[3].inSlotItem.itemNumber == 0 || whatSlot[3].inSlotItem.itemNumber == 41/*아이템 번호*/)
+            {
+                for (byte i = 0; i < 3; i++)
+                {
+                    whatSlot[i].Amount -= 1;
+                    amounts[i] -= 1;
+                }
+                whatSlot[3].inSlotItem = Resources.Load<ItemTable>("07.ItemLists/Juices/PotatoJuice");//대입할 아이템 테이블 주소(resource폴더 안에 있어야함,확장자 이름은 지워야함
                 whatSlot[3].Amount += 1;
             }
         }

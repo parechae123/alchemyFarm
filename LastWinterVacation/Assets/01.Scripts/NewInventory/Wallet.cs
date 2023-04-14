@@ -14,4 +14,8 @@ public class Wallet : MonoBehaviour
             goldAmount.text = gold.ToString();
         } 
     }
+    private void Start()
+    {
+        Gold += 2000;
+    }
 }
